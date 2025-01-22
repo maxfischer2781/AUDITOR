@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Changelog &mdash; pyauditor  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
@@ -201,22 +201,42 @@ and this project adheres to <a class="reference external" href="https://semver.o
 </section>
 <section id="security">
 <h3>Security<a class="headerlink" href="#security" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>[RUSTSEC-2024-0363]: Update sqlx from 0.7.4 to 0.8.2 (missed some occurrences) (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>[RUSTSEC-2024-0399]: Update rustls from 0.23.16 to 0.23.19 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>[RUSTSEC-2024-0402]: Update hashbrown from 0.15.0 to 0.15.2 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+</ul>
 </section>
 <section id="added">
 <h3>Added<a class="headerlink" href="#added" title="Link to this heading"></a></h3>
 <ul class="simple">
+<li><p>AUDITOR: Add tls to AUDITOR, plugins and collectors (<a class="reference external" href="https://github.com/raghuvar-vijay">&#64;raghuvar-vijay</a>)</p></li>
+<li><p>Apel plugin: Add function for user-&gt;VO mapping to config (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
 <li><p>CI: Add workflow to test publishing to the PyPI test repo (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Kubernetes collector: Added a Kubernetes collector (<a class="reference external" href="https://github.com/rkleinem">&#64;rkleinem</a>)</p></li>
 </ul>
 </section>
 <section id="changed">
 <h3>Changed<a class="headerlink" href="#changed" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Auditor Docker container: Switch from fixed to latest Rust version (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
-<li><p>Dependencies: Update crate-ci/typos from 1.26.8 to 1.27.3 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
-<li><p>Dependencies: Update ruff from 0.7.1 to 0.7.3 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
-<li><p>Dependencies: Update setuptools from 75.3.0 to 75.4.0 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Switch from pyo3-asyncio 0.20.0 to pyo3-async-runtimes 0.22.0 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update anyhow from 1.0.94 to 1.0.95 (<a class="reference external" href="https://github.com/raghuvar-vijay">&#64;raghuvar-vijay</a>)</p></li>
+<li><p>Dependencies: Update codecov/codecov-action from 3 to 5 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update crate-ci/typos from 1.26.8 to 1.28.4 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update cryptography from 43.0.3 to 44.0.0 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update mypy from 1.13.0 to 1.14.1 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update pydantic from 2.9.2 to 2.10.5 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update pyo3 from 0.20.3 to 0.22.5 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update pytest from 8.3.3 to 8.3.4 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update ruff from 0.7.1 to 0.9.2 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update setuptools from 75.3.0 to 75.8.0 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
 <li><p>Dependencies: Update sqlx from 0.7.4 to 0.8.2 (missed some occurrences) (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update types-pyyaml from 6.0.12.20240917 to 6.0.12.20241230 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
 <li><p>Apel plugin: Update timestamp JSON atomically (<a class="reference external" href="https://github.com/maxfischer2781">&#64;maxfischer2781</a>)</p></li>
+<li><p>Slurm collector: Fix timezone offset of local timestamp <code class="docutils literal notranslate"><span class="pre">lastcheck</span></code> (#681, #178) (<a class="reference external" href="https://github.com/rkleinem">&#64;rkleinem</a>)</p></li>
+<li><p>Slurm collector: Ignore <code class="docutils literal notranslate"><span class="pre">.extern</span></code> steps instead of handling them as separate jobs (#812) (<a class="reference external" href="https://github.com/rkleinem">&#64;rkleinem</a>)</p></li>
+<li><p>Slurm collector: Ignore cancelled jobs which have never been started (#811) (<a class="reference external" href="https://github.com/rkleinem">&#64;rkleinem</a>)</p></li>
 </ul>
 </section>
 <section id="removed">
@@ -250,7 +270,6 @@ and this project adheres to <a class="reference external" href="https://semver.o
 <section id="id5">
 <h3>Changed<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Dependencies: Update sqlx from 0.7.4 to 0.8.2 (<a class="reference external" href="https://github.com/raghuvar-vijay">&#64;raghuvar-vijay</a>)</p></li>
 <li><p>Dependencies: Update black from 24.4.2 to 24.10.0 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
 <li><p>Dependencies: Update build from 1.2.1 to 1.2.2.post1 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
 <li><p>Dependencies: Update crate-ci/typos from 1.23.3 to 1.26.8 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
@@ -267,6 +286,7 @@ and this project adheres to <a class="reference external" href="https://semver.o
 <li><p>Dependencies: Update serde_json from 1.0.121 to 1.0.132 (<a class="reference external" href="https://github.com/raghuvar-vijay">&#64;raghuvar-vijay</a>)</p></li>
 <li><p>Dependencies: Update setuptools from 71.1.0 to 75.3.0 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
 <li><p>Dependencies: Update shalzz/zola-deploy-action from 0.19.1 to 0.19.2 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
+<li><p>Dependencies: Update sqlx from 0.7.4 to 0.8.2 (<a class="reference external" href="https://github.com/raghuvar-vijay">&#64;raghuvar-vijay</a>)</p></li>
 <li><p>Dependencies: Update tarides/changelog-check-action from 2 to 3 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
 <li><p>Dependencies: Update types-pyyaml from 6.0.12.20240311 to 6.0.12.20240917 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
 <li><p>Dependencies: Update types-requests from 2.32.0.20240712 to 2.32.0.20241016 (<a class="reference external" href="https://github.com/dirksammel">&#64;dirksammel</a>)</p></li>
